@@ -3,3 +3,9 @@
     <RouterView />
   </main>
 </template>
+
+<style scoped>
+.app-root {
+  min-height: 100vh;
+}
+</style>
