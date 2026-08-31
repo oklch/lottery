@@ -39,6 +39,7 @@ body {
   overflow-x: hidden;
   background: #f4f6f8;
   color: var(--ink);
+  touch-action: manipulation;
 }
 
 button,
@@ -191,7 +192,24 @@ button {
 }
 
 .game-tabs .van-tab {
+  flex: 1 0 0;
+  min-width: 0;
   border-right: 1px solid var(--line);
+}
+
+.game-tabs .van-tab__text {
+  display: flex;
+  min-width: 0;
+  overflow: visible;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-tabs .van-tab__text--ellipsis {
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: initial;
+  -webkit-line-clamp: unset;
 }
 
 .game-tabs .van-tab:last-child {
@@ -206,6 +224,8 @@ button {
   display: inline-flex;
   gap: 9px;
   align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .tab-title strong {
@@ -354,6 +374,7 @@ button {
 .number-zone {
   min-width: 0;
   padding: 24px 26px 28px;
+  touch-action: manipulation;
 }
 
 .number-zone + .number-zone {
@@ -437,6 +458,7 @@ button {
   border-radius: 50%;
   background: #fff;
   cursor: pointer;
+  touch-action: manipulation;
   font-size: 14px;
   font-weight: 740;
   font-variant-numeric: tabular-nums;
@@ -522,6 +544,7 @@ button {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 12px 32px rgba(28, 34, 43, 0.13);
+  touch-action: manipulation;
 }
 
 .confirmation-result {
@@ -545,17 +568,15 @@ button {
 }
 
 .confirmation-check {
-  position: relative;
+  display: grid;
   width: 24px;
   height: 24px;
+  place-items: center;
   border-radius: 50%;
   background: var(--success);
 }
 
 .confirmation-check::after {
-  position: absolute;
-  top: 6px;
-  left: 8px;
   width: 7px;
   height: 4px;
   border-bottom: 2px solid #fff;
@@ -670,18 +691,21 @@ button {
 }
 
 .ticket-summary {
-  display: grid;
-  grid-template-columns: 14px 56px 14px 1px 52px 14px;
+  display: flex;
   gap: 4px;
+  min-width: 0;
+  width: 100%;
   align-items: center;
   justify-content: center;
   color: var(--ink-muted);
   font-size: 13px;
+  white-space: nowrap;
 }
 
 .ticket-summary > span,
 .ticket-summary > strong {
   display: grid;
+  flex: 0 0 auto;
   height: 38px;
   place-items: center;
   line-height: 1;
@@ -700,6 +724,7 @@ button {
   font-weight: 740;
   font-variant-numeric: tabular-nums;
   text-align: center;
+  flex: 0 0 56px;
 }
 
 .bet-count-input::-webkit-inner-spin-button,
@@ -713,14 +738,18 @@ button {
 }
 
 .ticket-summary strong {
+  flex: 0 0 52px;
+  width: 52px;
   color: var(--ink);
   font-size: 23px;
   font-variant-numeric: tabular-nums;
 }
 
 .ticket-summary i {
+  flex: 0 0 1px;
   width: 1px;
   height: 18px;
+  margin: 0 8px;
   background: var(--line-strong);
 }
 
@@ -892,24 +921,32 @@ button {
   }
 
   .ticket-summary {
-    grid-template-columns: 12px 38px 12px 1px 34px 12px;
     gap: 2px;
     font-size: 11px;
+    width: 144px;
+    justify-self: center;
   }
 
   .ticket-summary strong {
+    flex-basis: 36px;
+    width: 36px;
     font-size: 17px;
   }
 
   .bet-count-input {
-    width: 38px;
+    width: 48px;
     height: 34px;
     font-size: 16px;
+    flex-basis: 48px;
   }
 
   .ticket-summary > span,
   .ticket-summary > strong {
     height: 34px;
+  }
+
+  .ticket-summary i {
+    margin: 0 4px;
   }
 
 }
@@ -921,11 +958,27 @@ button {
   }
 
   .action-dock {
-    grid-template-columns: 48px minmax(0, 1fr) 100px;
+    grid-template-columns: 42px minmax(0, 1fr) 90px;
+    gap: 4px;
   }
 
   .ticket-summary i {
-    display: none;
+    margin: 0 5px;
+  }
+
+  .ticket-summary {
+    gap: 1px;
+    width: 128px;
+  }
+
+  .ticket-summary strong {
+    flex-basis: 32px;
+    width: 32px;
+  }
+
+  .bet-count-input {
+    width: 48px;
+    flex-basis: 48px;
   }
 }
 
