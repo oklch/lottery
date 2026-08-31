@@ -1,46 +1,64 @@
-<script setup lang="ts" generic="T extends any, O extends any">
+<script setup lang="ts">
+import { Tab as VanTab, Tabs as VanTabs } from 'vant'
+import { lotteryGames } from '~/config/lotteries'
+import 'vant/es/tab/style'
+import 'vant/es/tabs/style'
+
 defineOptions({
   name: 'IndexPage',
 })
 
-const name = ref('')
-
-const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
-}
+const activeGame = ref(lotteryGames[0].id)
 </script>
 
 <template>
-  <div>
-    <div i-carbon-campsite text-4xl inline-block />
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu-collective/vitesse-lite" target="_blank">
-        Vitesse Lite
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#main-picker" aria-label="回到选号区">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-dot brand-dot--red" />
+          <span class="brand-dot brand-dot--blue" />
+        </span>
+        <span>
+          <strong>数字彩选号</strong>
+        </span>
       </a>
-    </p>
-    <p>
-      <em text-sm op75>Opinionated Vite Starter Template</em>
-    </p>
+    </header>
 
-    <div py-4 />
+    <section id="main-picker" class="picker-surface" aria-labelledby="picker-title">
+      <div class="picker-heading">
+        <div>
+          <h1 id="picker-title">
+            选择你的号码
+          </h1>
+          <p>每注 2 元，选满即可确认。</p>
+        </div>
+      </div>
 
-    <TheInput
-      v-model="name"
-      placeholder="What's your name?"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-
-    <div>
-      <button
-        class="text-sm btn m-3"
-        :disabled="!name"
-        @click="go"
+      <VanTabs
+        v-model:active="activeGame"
+        class="game-tabs"
+        swipeable
+        animated
+        :duration="0.28"
+        line-width="32"
+        line-height="3"
       >
-        Go
-      </button>
-    </div>
+        <VanTab
+          v-for="game in lotteryGames"
+          :key="game.id"
+          :name="game.id"
+        >
+          <template #title>
+            <span class="tab-title">
+              <strong>{{ game.name }}</strong>
+              <small>{{ game.selectionLabel }}</small>
+            </span>
+          </template>
+          <LotteryPicker :game="game" />
+        </VanTab>
+      </VanTabs>
+    </section>
+
   </div>
 </template>

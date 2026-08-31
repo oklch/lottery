@@ -1,25 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>Vitesse Lite</title>
-    <meta name="description" content="Opinionated Vite Starter Template" />
+    <meta name="theme-color" content="#f4f6f8" />
+    <title>数字彩选号</title>
+    <meta name="description" content="双色球与大乐透响应式选号页面" />
   </head>
-  <body class="font-sans dark:text-white dark:bg-hex-121212">
+  <body>
+    <!--
+      THESIS: 选号是把号码准确放进固定槽位，而不是堆叠彩票娱乐卡片。
+      OWN-WORLD: 纸白与冷灰组成连续精密分选台；真红与真蓝只用于球种和选中状态，控件使用细刻度、浅凹槽与克制圆角。
+      STORY: 用户切换彩种，按明确的 6+1 或 5+2 槽位完成选号，设置注数和金额后确认结果。
+      FIRST VIEWPORT: 顶部为品牌与双 Tab，中部先展示选号槽，再展开红/蓝号码区，确认动作固定在底部工作台。
+      FORM: 精密样品分选台，七个候选方向中的第 3 项；seed 2efadd4a。
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+    -->
     <div id="app"></div>
     <noscript>
-      <div>Please enable JavaScript to use this application.</div>
+      <div>请启用 JavaScript 以使用选号页面。</div>
     </noscript>
-    <script>
-      ;(function () {
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-        const setting = localStorage.getItem('color-schema') || 'auto'
-        if (setting === 'dark' || (prefersDark && setting !== 'light'))
-          document.documentElement.classList.toggle('dark', true)
-      })()
-    </script>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
