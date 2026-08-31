@@ -31,7 +31,7 @@ const activeGame = ref(lotteryGames[0].id)
           <h1 id="picker-title">
             选择你的号码
           </h1>
-          <p>每注 2 元，选满即可确认。</p>
+          <p>每注 2 元，可加入多组号码后统一确认。</p>
         </div>
       </div>
 
