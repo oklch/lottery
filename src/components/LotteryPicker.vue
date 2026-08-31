@@ -67,7 +67,6 @@ function normalizeBetCount() {
 }
 
 function handleBetInput() {
-  betCount.value = normalizedBetCount.value
   confirmationResult.value = null
 }
 
