@@ -1,0 +1,12 @@
+Use case: ui-mockup
+Asset type: high-fidelity mobile-first responsive Vue lottery number picker design comp, portrait 1024x1536
+Primary request: Design a complete Chinese lottery number selection screen as a precision sample-sorting workbench. This is an app interface, not a poster or device mockup. The task must be obvious instantly.
+Scene/backdrop: flat front-on app viewport on a cool pure-white surface, no surrounding phone hardware.
+Subject and structure: top compact title row “选号” with a small outlined “仅供演示” status; a two-tab switch “双色球” active and “大乐透”; immediately below, a horizontal seven-slot selection rail showing six red chosen balls and one blue chosen ball; below it two clearly labeled regions, “红球 · 选6个” with a 01–33 circular number grid and “蓝球 · 选1个” with a 01–16 grid; bottom dock shows “已选 6+1”, “1注”, “2元” and a strong primary action “确认选号”, plus a quiet “清空” action.
+Style/medium: high-fidelity production UI mockup, precision laboratory sample tray translated into web UI, restrained modern Chinese interface, subtle milled aluminum dividers and hairline calibration marks, rounded but not bubbly, calm and premium.
+Composition/framing: mobile portrait, dense but breathable, one continuous white work surface rather than a stack of generic cards. First viewport must include the complete number grids and bottom action.
+Color palette: paper white and cool gray typography; red balls stay true red; blue balls stay true blue; no other saturated accent.
+Materials/textures: lightly textured paper-white base, precise thin cool-gray rules, restrained soft inset shadows only inside selection wells.
+Text (verbatim): “选号”, “仅供演示”, “双色球”, “大乐透”, “红球 · 选6个”, “蓝球 · 选1个”, “已选 6+1”, “1注”, “2元”, “清空”, “确认选号”.
+Constraints: show red balls numbered 01–33 and blue balls numbered 01–16; selected balls are filled with white numerals, unselected are white with colored outlines; selected red examples 03, 08, 16, 22, 29, 31; selected blue example 07; accessible large touch targets; no backend claims.
+Avoid: dark mode, gambling casino imagery, gradients, glassmorphism, neon, gold, confetti, coins, generic dashboard cards, side navigation, stock photography, phone frame, watermark.

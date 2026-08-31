@@ -1,0 +1,12 @@
+Use case: ui-mockup
+Asset type: high-fidelity mobile-first responsive Vue lottery number picker design comp, portrait 1024x1536
+Primary request: Design a complete Chinese lottery number selection screen inside the same precision sample-sorting visual world, but organize it as a guided two-stage ballot sheet. This is an app interface, not a poster or device mockup. The task must be obvious instantly.
+Scene/backdrop: flat front-on app viewport on a clean paper-white surface, no phone hardware.
+Subject and structure: a compact header “选号” and a two-tab switch “双色球” active, “大乐透”; under the tabs a strong single-line progress instrument “还差 0 个红球 · 0 个蓝球” with seven tiny filled slot markers; the main area is one continuous numbered ballot sheet split by a vertical hairline into a wider red-ball field and a narrow blue-ball field, both fully visible; red grid shows 01–33 with exactly six selected, blue grid shows 01–16 with exactly one selected; a receipt-like bottom band lists “红球 03 08 16 22 29 31” and “蓝球 07”, then “1注 · 2元”; bottom actions “清空” and “确认选号”.
+Style/medium: high-fidelity production UI mockup, modern ballot paper plus laboratory calibration sheet, restrained premium Chinese interface, typography-led, flat precise rules, modest rounded corners only for balls and buttons.
+Composition/framing: mobile portrait; no card stack; the red and blue fields share one continuous sheet and the selected receipt summary visibly emerges from it. First viewport includes all number choices and the primary action.
+Color palette: pure white and cool ink-gray; red balls stay true red; blue balls stay true blue; no other saturated accent.
+Materials/textures: very light uncoated ticket-paper texture, micro-perforation dots in the receipt band, hairline cool-gray measurement rules.
+Text (verbatim): “选号”, “双色球”, “大乐透”, “还差 0 个红球 · 0 个蓝球”, “红球 · 选6个”, “蓝球 · 选1个”, “红球 03 08 16 22 29 31”, “蓝球 07”, “1注 · 2元”, “清空”, “确认选号”.
+Constraints: accurate red balls 01–33 and blue balls 01–16; selected red 03, 08, 16, 22, 29, 31; selected blue 07; selected filled with white numerals, unselected white with colored outline; accessible large touch targets; no backend claims.
+Avoid: dark mode, gambling casino imagery, gradients, glassmorphism, neon, gold, confetti, coins, generic dashboard cards, side navigation, stock photography, phone frame, watermark.
